@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-threadpool",
+  "version": "1.0.0",
+  "description": "we can use threadpool in nodejs directly , nodejs-threadpool is try to handle this.",
+  "main": "ThreadPool.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/index.js 1" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theanarkh/nodejs-threadpool-v2.git"
+  },
+  "keywords": [
+    "worker",
+    "threadpool"
+  ],
+  "author": "theanarkh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theanarkh/nodejs-threadpool-v2/issues"
+  },
+  "homepage": "https://github.com/theanarkh/nodejs-threadpool-v2#readme"
+}
