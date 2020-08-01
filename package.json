@@ -1,6 +1,6 @@
 {
   "name": "nodejs-threadpool",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "we can use threadpool in nodejs directly , nodejs-threadpool is try to handle this.",
   "main": "ThreadPool.js",
   "directories": {

@@ -12,28 +12,13 @@ const CONFIG = new Proxy({
         return true;
     }
 })
-// 内部线程池类，以_开头的key属于内部属性
+// 线程池类，以_开头的key属于内部属性
 class ThreadPool {
     constructor() {
         // 任务队列
         this._workQueue = [];
         // 当前线程数
         this._count = 0;
-        // 劫持属性存取
-        return new Proxy(this, {
-            get(obj, key) {
-                if (['submit'].includes(key) || /^_/.test(key)) {
-                    return obj[key];
-                }
-                return false;
-            },
-            set(obj, key, value) {
-                if (/^_/.test(key)) {
-                    obj[key] = value;
-                    return true;
-                } 
-            }
-        }) 
     }
 
     _newThread(...rest) {
