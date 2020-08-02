@@ -1,6 +1,6 @@
 const { Worker } = require('worker_threads');
 
-// 线程池配置，使用Proxy，可以劫持属性的读写，做点事情
+// 配置，使用Proxy，可以劫持属性的读写，做点事情
 const CONFIG = new Proxy({
     MAX_THREAD: 3,
 }, {
@@ -12,7 +12,7 @@ const CONFIG = new Proxy({
         return true;
     }
 })
-// 线程池类，以_开头的key属于内部属性
+// 以_开头的key属于内部属性
 class ThreadGate {
     constructor() {
         // 任务队列
@@ -40,7 +40,7 @@ class ThreadGate {
         });
         return worker;
     }
-    // 给线程池提交一个任务
+    // 提交一个任务
     submit(...rest) {
         return new Promise((resolve, reject) => {
             // 还没有达到阈值，则新建线程，否则缓存起来
