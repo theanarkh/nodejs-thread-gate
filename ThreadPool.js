@@ -13,7 +13,7 @@ const CONFIG = new Proxy({
     }
 })
 // 线程池类，以_开头的key属于内部属性
-class ThreadPool {
+class ThreadGate {
     constructor() {
         // 任务队列
         this._workQueue = [];
@@ -53,12 +53,12 @@ class ThreadPool {
     }
 }
 
-const defaultThreadPool = new ThreadPool();
+const defaultThreadGate = new ThreadGate();
 module.exports = {
-    ThreadPool,
-    defaultThreadPool,
+    ThreadGate,
+    defaultThreadGate,
     submit: (...rest) => {
-        return defaultThreadPool.submit(...rest);
+        return defaultThreadGate.submit(...rest);
     },
     CONFIG,
 }
