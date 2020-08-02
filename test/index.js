@@ -1,23 +1,23 @@
 const {
-    ThreadPool,
+    ThreadGate,
     submit,
     CONFIG
-} = require('../ThreadPool');
+} = require('../ThreadGate');
 const path = require('path');
-const threadPool = new ThreadPool();
+const threadGate = new ThreadGate();
 
 async function testSubmit() {
     await submit(path.resolve(__dirname + '/worker.js'))
     await submit(path.resolve(__dirname + '/worker2.js'))
 }
 
-async function testThreadPool() {
-    await threadPool.submit(path.resolve(__dirname + '/worker.js'))
-    await threadPool.submit(path.resolve(__dirname + '/worker2.js'))
+async function testThreadGate() {
+    await threadGate.submit(path.resolve(__dirname + '/worker.js'))
+    await threadGate.submit(path.resolve(__dirname + '/worker2.js'))
 }
 
 
-async function testDefaultThreadPool() {
+async function testDefaultThreadGate() {
     await submit(path.resolve(__dirname + '/worker.js'))
     await submit(path.resolve(__dirname + '/worker2.js'))
 }
@@ -29,6 +29,6 @@ async function testWaitForThread() {
 }
 // node index 1
 process.argv[2] == 1 && testSubmit();
-process.argv[2] == 2 && testThreadPool();
-process.argv[2] == 3 && testDefaultThreadPool();
+process.argv[2] == 2 && testThreadGate();
+process.argv[2] == 3 && testDefaultThreadGate();
 process.argv[2] == 4 && testWaitForThread();

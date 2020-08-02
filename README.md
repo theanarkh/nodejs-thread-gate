@@ -1,2 +1,2 @@
-# nodejs-threadpool-v2
-we can use threadpool in nodejs directly , nodejs-threadpool is try to handle this. 
+# thread-gate
+we can use threadpool in nodejs directly , thread-gate try to handle this by controlling thread number.

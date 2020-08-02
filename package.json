@@ -1,8 +1,8 @@
 {
-  "name": "nodejs-threadpool",
-  "version": "1.0.2",
-  "description": "we can use threadpool in nodejs directly , nodejs-threadpool is try to handle this.",
-  "main": "ThreadPool.js",
+  "name": "thread-gate",
+  "version": "1.0.4",
+  "description": "we can use threadpool in nodejs directly , thread-gate try to handle this by controlling thread number.",
+  "main": "ThreadGate.js",
   "directories": {
     "test": "test"
   },
@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theanarkh/nodejs-threadpool-v2.git"
+    "url": "git+https://github.com/theanarkh/nodejs-thread-gate.git"
   },
   "keywords": [
     "worker",
-    "threadpool"
+    "thread"
   ],
   "author": "theanarkh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/theanarkh/nodejs-threadpool-v2/issues"
+    "url": "https://github.com/theanarkh/nodejs-thread-gate/issues"
   },
-  "homepage": "https://github.com/theanarkh/nodejs-threadpool-v2#readme"
+  "homepage": "https://github.com/theanarkh/nodejs-thread-gate#readme"
 }
