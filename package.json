@@ -1,6 +1,6 @@
 {
   "name": "thread-gate",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "we can use threadpool in nodejs directly , thread-gate try to handle this by controlling thread number.",
   "main": "ThreadGate.js",
   "directories": {

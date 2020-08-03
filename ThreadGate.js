@@ -2,7 +2,7 @@ const { Worker } = require('worker_threads');
 
 // 配置，使用Proxy，可以劫持属性的读写，做点事情
 const CONFIG = new Proxy({
-    MAX_THREAD: 3,
+    MAX_THREAD: 10,
 }, {
     get(obj, key) {
         return obj[key];
